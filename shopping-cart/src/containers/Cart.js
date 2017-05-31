@@ -25,9 +25,15 @@ const Cart = (props) => {
   )
 }
 
+function mapStateToProps(state, props) {
+  return {
+    cart: state.cart
+  };
+}
+
 function mapDispatchToProps(dispatch) {
   return {
-    actions: bindActionCreators (CartActions, dispatch)
+    actions: bindActionCreators(CartActions, dispatch)
   }
 }
 
